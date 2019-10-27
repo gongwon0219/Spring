@@ -1,0 +1,13 @@
+@charset "EUC-KR";
+
+.title{
+	color: blue;
+}
+
+.content{
+	color: green;
+}
+
+.writer{
+	color: red;
+}
