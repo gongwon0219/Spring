@@ -6,12 +6,6 @@
 
 <mapper namespace="book">
 
-	<select id="selectOne" parameterType="bookDto" resultMap="map">
-		SELECT *
-		FROM bookMark
-		WHERE id = #{id}
-	</select>
-
  	<resultMap type="bookDto" id="map">
 		<result property="id" column="id" />
 		<result property="name" column="name" />
@@ -20,6 +14,12 @@
 		<!--         서로 같으면 안해도 됨 -->
 	</resultMap>
 
+	<select id="selectOne" parameterType="bookDto" resultMap="map">
+		SELECT *
+		FROM bookMark
+		WHERE id = #{id}
+	</select>
+	
 	<select id="selectAll" resultMap="map">
 		<!--  array list 사용 -->
 		SELECT * FROM bookmark
