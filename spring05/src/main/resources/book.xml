@@ -6,7 +6,7 @@
 
 <mapper namespace="book">
 
-<select id="selectOne" parameterType="bookDto" resultMap="map">
+	<select id="selectOne" parameterType="bookDto" resultMap="map">
 		SELECT *
 		FROM bookMark
 		WHERE id = #{id}
